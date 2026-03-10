@@ -7,13 +7,17 @@ class Solution {
         matrix[j][i] = temp;
     }
 }
-  for (int i = 0; i < matrix.length; i++) {          
-    for (int j = 0; j < matrix[i].length / 2; j++) { 
-        int temp = matrix[i][j];
-        matrix[i][j] = matrix[i][matrix[i].length - 1 - j];
-        matrix[i][matrix[i].length - 1 - j] = temp;
-    }
-}
+   for (int i = 0; i < matrix.length; i++) {
+            int start = 0;
+            int end = matrix.length - 1;
+            while (start < end) {
+                int temp = matrix[i][start];
+                matrix[i][start] = matrix[i][end];
+                matrix[i][end] = temp;
+                start++;
+                end--;
+            }
+        }
 
     }
 }
