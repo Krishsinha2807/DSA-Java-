@@ -10,23 +10,23 @@
  */
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if(head==null)
-        {
-            return head;
-        }  
-        ArrayList<Integer>list=new ArrayList<>();
-         ListNode temp = head;
-        while (temp != null) {
-            list.add(temp.val);
-            temp = temp.next;
-        }
-        Collections.rotate(list,k);
-        temp=head;
-         for(int l=0;l<list.size();l++)
-         {
-            temp.val =list.get(l);
-            temp=temp.next;
-         } 
-         return head;
+    ListNode temp=head;
+    ArrayList<Integer>list=new ArrayList<>();
+    while(temp!=null)
+    {
+       list.add(temp.val);
+       temp=temp.next;
+    }  
+    Collections.rotate(list,k);
+    temp=head;
+    int i=0;
+    while(temp!=null)
+    {
+        temp.val=list.get(i);
+        i++;
+        temp=temp.next;
+    }
+    return head;
+        
     }
 }
