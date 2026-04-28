@@ -25,7 +25,7 @@ class Solution {
             }
             temp=temp.next;
         }
-                if(list1 != null){
+            if(list1 != null){
             temp.next = list1;
         }
         else{
