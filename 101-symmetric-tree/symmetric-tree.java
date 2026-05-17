@@ -18,10 +18,13 @@ class Solution {
         if(root==null) return true;
         return isHelper(root.left,root.right);
     }
-    boolean isHelper(TreeNode left,TreeNode right){
-        if(left==null && right==null) return true;
-        if(left==null || right==null) return false;
-        if(left.val!=right.val) return false;
-        return isHelper(left.left,right.right) && isHelper(left.right,right.left);
-    }
+        boolean isHelper(TreeNode left,TreeNode right){
+            if(left==null && right==null) return true;
+            if(left==null|| right==null) return false;
+            if(left.val!=right.val) return false;
+            return isHelper(left.left,right.right) && isHelper(left.right,right.left);
+        }
+    
+        
+    
 }
