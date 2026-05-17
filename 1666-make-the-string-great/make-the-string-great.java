@@ -1,19 +1,20 @@
 class Solution {
     public String makeGood(String s) {
-        Stack<Character>stack =new Stack<>();
+        Stack<Character>stack=new Stack<>();
         for(int i=0;i<s.length();i++){
-            if(!stack.isEmpty() && Math.abs(stack.peek()-s.charAt(i))==32){
+            char ch=s.charAt(i);
+            if(!stack.isEmpty() && Math.abs(stack.peek()-ch)==32){
                 stack.pop();
             }
             else{
-                stack.push(s.charAt(i));
+                 stack.push(ch);
             }
+
         }
-        StringBuilder sb=new StringBuilder();
+        String ans="";
         for(int i=0;i<stack.size();i++){
-            sb.append(stack.get(i));
+            ans=ans+stack.get(i);
         }
-        return sb.toString();
-        
+        return ans;
     }
 }
