@@ -10,21 +10,21 @@
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if(head ==null)
-        {
-            return null;
-        }
+        //Stack<Integer>stack=new Stack<>();//
+        ArrayList<Integer>list=new ArrayList<>();
         ListNode temp=head;
-        while(temp!=null && temp.next!=null)
-        {
-            if(temp.val==temp.next.val)
-            {
-                temp.next=temp.next.next;
-            }
-            else{
-                temp=temp.next;
-            }
+        while(temp!=null){
+            if(!list.contains(temp.val)) list.add(temp.val);
+             temp=temp.next;
         }
-        return head;
+        ListNode dummy=new ListNode(0);
+        ListNode tmp=dummy;
+        int n=list.size();
+        for(int i=0;i<n;i++){
+           tmp.next=new ListNode(list.get(i));
+           tmp=tmp.next;
+        }
+        return dummy.next;
+        
     }
 }
