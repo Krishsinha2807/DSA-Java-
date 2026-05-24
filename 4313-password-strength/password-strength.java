@@ -18,7 +18,6 @@ class Solution {
             else if(ch>='a' && ch<='z') count =count+1;
             else if(Character.isDigit(ch)) count =count +3;
             else count =count +5;
-
         }
         return count;
        /* for(int i=0;i<password.length();i++){
@@ -27,9 +26,7 @@ class Solution {
             else if(ch>='a' && ch<='z') count =count+1;
             else if(Character.isDigit(ch)) count =count +3;
             else count =count +5;
-
         }
-        return count;*/
-        
+        return count;*/  
     }
 }
