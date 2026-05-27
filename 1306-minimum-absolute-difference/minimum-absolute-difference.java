@@ -21,18 +21,15 @@ class Solution {
            idx++;
         }
       */
-
         Arrays.sort(arr); 
         for (int i = 0; i < arr.length - 1; i++) {
             min = Math.min(min, arr[i + 1] - arr[i]);
         }
-
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i + 1] - arr[i] == min) {
                 result.add(Arrays.asList(arr[i], arr[i + 1]));
             }
         }
-
         return result;
     }
 }
