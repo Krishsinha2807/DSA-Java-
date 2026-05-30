@@ -24,7 +24,7 @@ class Solution {
                 score--;
                 j--;
             }
-            else break;
+          else break;  
         }
         return max;
     }
