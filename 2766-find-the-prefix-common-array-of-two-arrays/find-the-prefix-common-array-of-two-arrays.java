@@ -4,8 +4,8 @@ class Solution {
         int i=0;
         int j=A.length;
         int k=B.length;
-        HashSet<Integer>set=new HashSet<>();
-        HashSet<Integer>set1=new HashSet<>();
+        HashSet<Integer>set=new HashSet<>();//pehla 
+        HashSet<Integer>set1=new HashSet<>();//dusra
         int count=0;
         int idx=0;
         while(i<j && i<k){
