@@ -5,7 +5,7 @@ class Solution {
             sum=sum+nums[i];
         } 
         for(int i=0;i<nums.length;i++){
-            rs=sum-ls-nums[i];  //total -leftside-middle
+            rs=sum-ls-nums[i];  //total -leftside-middle  [2,3,-1,8,4]
             if(ls==rs) return i;
             ls=ls+nums[i];
         }
