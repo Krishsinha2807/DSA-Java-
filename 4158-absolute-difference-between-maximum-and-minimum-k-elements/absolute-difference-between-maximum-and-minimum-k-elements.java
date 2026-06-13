@@ -11,7 +11,7 @@ class Solution {
         if(pos==k) break;
         sum1=sum1+nums[i];
         pos++;
-       }
+       } //bada
         return Math.abs(sum1-sum);
 
     }
