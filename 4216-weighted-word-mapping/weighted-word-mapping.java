@@ -9,7 +9,7 @@ class Solution {
                 sum+=weights[ch-'a'];
             }
             int mod=sum%26;
-            sb.append(dummy.charAt(25-mod));
+            sb.append(dummy.charAt(25-mod));//ulta
         }
         return sb.toString();
         
