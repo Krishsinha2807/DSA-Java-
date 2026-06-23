@@ -20,7 +20,6 @@ class Solution {
         if(root.right==null) return 1+minDepth(root.left);
         int left=minDepth(root.left);
         int right=minDepth(root.right);
-        return 1+Math.min(left,right);
-        
+        return 1+Math.min(left,right);        
     }
 }
