@@ -13,12 +13,6 @@ class Solution {
         }
         if(count<=1) return true;
         return false;
-
-
-      
-
-        
-
-        
+ 
     }
 }
