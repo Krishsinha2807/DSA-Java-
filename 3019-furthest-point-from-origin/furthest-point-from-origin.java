@@ -16,8 +16,6 @@ class Solution {
                 cdash++;
             }
         }
-        return Math.abs((cr-cl))+cdash;
-      
-        
+        return Math.abs((cr-cl))+cdash;  
     }
 }
