@@ -6,9 +6,7 @@ class Solution {
         for(int i=0;i<guess.length();i++){
             char s = secret.charAt(i);
             char g = guess.charAt(i);
-            if(s == g){
-                bulls++;
-            }
+            if(s == g)bulls++;
             else{
                 if(freq[s-'0'] < 0) cows++;
                 if(freq[g-'0'] > 0) cows++;
