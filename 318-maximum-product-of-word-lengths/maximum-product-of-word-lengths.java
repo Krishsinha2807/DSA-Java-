@@ -52,24 +52,24 @@ class Solution {
         return true;*/
           int max = 0;
         HashSet<Character>[] arr = new HashSet[words.length];
-        for(int i = 0; i < words.length; i++){
-            arr[i] = new HashSet<>();
-            for(char ch : words[i].toCharArray()){
+        for(int i=0;i<words.length;i++){
+            arr[i]=new HashSet<>();
+            for(char ch :words[i].toCharArray()){
                 arr[i].add(ch);
             }
         }
-        for(int i = 0; i < words.length; i++){
-            for(int j = i + 1; j < words.length; j++){
-                boolean same = false;
-                for(char ch : arr[i]){
+        for(int i=0;i<words.length;i++){
+            for(int j=i+1;j<words.length;j++){
+                boolean same=false;
+                for(char ch:arr[i]){
                     if(arr[j].contains(ch)){
                         same = true;
                         break;
                     }
                 }
                 if(!same){
-                    int p = words[i].length() * words[j].length();
-                    max = Math.max(max, p);
+                    int p=words[i].length()*words[j].length();
+                    max=Math.max(max, p);
                 }
             }
         }
