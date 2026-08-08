@@ -8,7 +8,6 @@ class Solution {
             if(nums[mid]>target)end=mid-1;
             else start=mid+1;
         }
-        return start;
-        
+        return start; 
     }
 }
