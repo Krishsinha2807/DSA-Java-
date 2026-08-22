@@ -10,6 +10,6 @@ class Solution {
             return;
         }
         if(open<max)backtrack(ans,cur+"(",open+1,close,max);
-        if(close<open)backtrack(ans,cur+")",open,close+1,max);
+        if(close<open)backtrack(ans,cur+")",open,close+1,max);//backtrack 
     }
 }
