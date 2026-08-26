@@ -33,14 +33,13 @@ class Solution {
             prev1=temp1;
             temp1=temp1.next;
         }
-         temp = prev;
-        prev = null;
-
+         temp=prev;
+        prev=null;
         while(temp != null){
-            ListNode front = temp.next;
-            temp.next = prev;
-            prev = temp;
-            temp = front;
+            ListNode front=temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=front;
         }
 
         return prev;
